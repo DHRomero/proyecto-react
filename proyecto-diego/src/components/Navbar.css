@@ -1,0 +1,21 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btnav{
+    background-color: rgb(99, 15, 15);
+    color: white; 
+    padding: 10px;
+    margin: 5px;
+    border-radius: 6px;
+    border: 1px solid black;
+    align-items: center;
+}
+
+.logo{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+}
+

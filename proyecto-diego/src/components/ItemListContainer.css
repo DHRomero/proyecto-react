@@ -1,0 +1,7 @@
+.tituloColor{
+    color: white(70, 40, 40);
+    background-color: rgba(165, 42, 42, 0.185);
+   font-style: oblique;
+   font-size: 45px;
+   font-weight: 900;
+}
