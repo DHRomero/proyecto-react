@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 10px;
 }
 .btnav{
     background-color: rgb(99, 15, 15);
@@ -18,4 +19,11 @@
     height: 80px;
     border-radius: 100%;
 }
+
+.link{
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
 

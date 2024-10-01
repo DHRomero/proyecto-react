@@ -1,0 +1,33 @@
+.imgCard{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.title{
+    font-size: 40px;
+    font-weight: 900;
+    font-style: oblique;
+}
+
+.cardProduct{
+    border: 1px solid black;
+    width: 350px;
+    justify-content: center;
+    gap: 90px;
+    margin: 16px;
+    padding: 10px;
+    border-radius: 5px;
+} 
+
+.containerCard{
+    display: flex;
+    justify-content: center;
+}
+
+.carritoBtn{
+    border-radius: 10px;
+    padding: 5px;
+    width: 60%;
+}
+
