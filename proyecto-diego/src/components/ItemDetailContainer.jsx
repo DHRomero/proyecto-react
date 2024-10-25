@@ -1,21 +1,52 @@
-import { Link } from "react-router-dom"
+import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
 import "./ItemDetailContainer.css"
-import ProductViews from "../views/ProductViews"
+import {doc, getDoc} from "firebase/firestore"
+import {db} from "./firebase/firebase"
+import ItemQuantitySelector from "./ItemQuantitySelector"
+import Loader from "./Loader"
 
-export default function ItemDetailContainer({product}){
 
+export default function ItemDetailContainer(){
+
+    const[product, setProduct]= useState({})
+    const [loading, setLoading] = useState(true);
+
+    const {id}= useParams();
+
+    useEffect(()=>{
+        const docRef = doc(db, "items", id);
+        getDoc (docRef)
+        .then((resp)=>{
+            setProduct(
+                {...resp.data(), id: resp.id}
+            );
+        })
+        .catch((error) => {
+            console.error("Error al cargar el producto: ", error);
+        })
+        .finally(() => {
+            setLoading(false);  
+        });
+    
+    },[]);
 
     return(
         <>
-        <section className="container"> 
-        <article className="card">
-            <h2>{product.nombre}</h2>
-            <img className="cardImg" src={product.imagen} alt={product.nombre} />
-            <p>Cepa: {product.description}</p>
-            <p>Bodega: {product.Bodega}</p>
-            <button className="detailBtn"><Link className= "linkBtn "to= {`/product/${product.id}`}>Ver Detalles</Link></button>
+        <section className="containerCard">
+        {loading? (<Loader/>) :(
+        <article className="cardProduct">
+            <h2 className="title">{product.nombre}</h2>
+            <img className="imgCard" src= {product.imagen} alt= {product.nombre} />
+            <p><b>Cepa:</b> {product.description} </p>
+            <p><b>Bodega: </b>{product.bodega}</p>
+            <p><b>Precio: $ </b>{product.precio}</p>
+           
+            <ItemQuantitySelector product={product}/>    
+            
         </article>
+        )}
         </section>
         </>
     )
-} 
+}

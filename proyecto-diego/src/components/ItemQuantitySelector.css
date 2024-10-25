@@ -1,0 +1,20 @@
+.contador{
+    padding: 5px;
+    margin: 10px;
+    width: 100px;
+    background-color: brown;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.title-second{
+    font-size: 20px;
+}
+
+.btnAgregar{
+    border-radius: 10px;
+    padding: 5px;
+    width: 60%;
+    font-size: 16px;
+    background-color: brown;
+}

@@ -1,0 +1,27 @@
+.containerCarrito{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.carrito{
+margin: 10px;
+}
+
+.btnCompra{
+    border-radius: 10px;
+    padding: 5px;
+    width: 150px ;
+    background-color: brown;
+}
+
+.linkBtn{
+    color: white;
+}
+
+.imgCarrito{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+

@@ -1,0 +1,15 @@
+.btnCarrito{
+    background-color: rgb(99, 15, 15);
+    color: white; 
+    padding: 10px;
+    margin: 5px;
+    border-radius: 6px;
+    border: 1px solid black;
+    align-items: center;
+}
+
+.link{
+    text-decoration: none;
+    font-size: 16px; 
+    color: white;
+}

@@ -1,0 +1,35 @@
+.card{
+    border: 1px solid black;
+    gap: 90px;
+    margin: 16px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.cardImg{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.container{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.detailBtn{
+    border-radius: 10px;
+    padding: 5px;
+    width: 60%;
+    background-color: brown;
+}
+
+.linkBtn{
+    text-decoration: none;
+    color: black;  
+}
+
+
