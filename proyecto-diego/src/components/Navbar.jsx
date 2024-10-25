@@ -4,7 +4,7 @@ import "./NavBar.css"
 import { Link } from 'react-router-dom'
 
 
-export default function NavBar (product){
+export default function NavBar (){
 
     return (
         <>
