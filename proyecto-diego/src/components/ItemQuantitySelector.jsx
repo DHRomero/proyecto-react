@@ -10,7 +10,7 @@ export default function ItemQuantitySelector({product}) {
   const{carrito,addItemButton}= useContext(CartContext);
   console.log(carrito);
 
-    const [cantidad, setCantidad] = useState(0);
+    const [cantidad, setCantidad] = useState(1);
   
     const handleSuma = () => {
       cantidad < product.stock && setCantidad(cantidad +1)
