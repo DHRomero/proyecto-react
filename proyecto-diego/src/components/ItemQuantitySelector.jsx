@@ -23,7 +23,7 @@ export default function ItemQuantitySelector({product}) {
       const handleAgregar = () => {
         addItemButton(product, cantidad);
 
-        toast.success(`${product.nombre} agregado al carrito. Cantidad: ${cantidad}`, {
+        toast.success(`${product.nombre} ${product.description} agregado al carrito. Cantidad: ${cantidad}`, {
           position: "top-right",  
           autoClose: 3000,        
           hideProgressBar: false,
